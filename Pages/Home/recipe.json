@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Sandwich with Bacon and Cheeseburger",
+    "image": "/assessts/Burger.png",
+    "time": "30 Minutes",
+    "type": "Meat"
+  },
+  {
+    "title": "Fresh Lime Roasted Salmon with Ginger Sauce",
+    "image": "/assessts/Lime.png",
+    "time": "30 Minutes",
+    "type": "Lunch"
+  },
+  {
+    "title": "Strawberry Oatmeal Pancake with Honey Syrup",
+    "image": "/assessts/Blue pancakes.png",
+    "time": "30 Minutes",
+    "type": "Breakfast"
+  },
+  {
+    "title": "Fresh and Healthy Mixed Mayonnaise Salad",
+    "image": "/assessts/White people food.png",
+    "time": "30 Minutes",
+    "type": "Vegan"
+  },
+  {
+    "title": "Chicken Meatballs with Cream Cheeses",
+    "image": "/assessts/Meatballs.png",
+    "time": "30 Minutes",
+    "type": "Meat"
+  },
+  {
+    "title": "Fried Salmon With Vegetables And Greens",
+    "image": "/assessts/Veg Fish.png",
+    "time": "30 Minutes",
+    "type": "Lunch"
+  },
+  {
+    "title": "Fruity Pancake with Orange & Blueberry",
+    "image": "/assessts/Orange Pancake.png",
+    "time": "30 Minutes",
+    "type": "Breakfast"
+  },
+  {
+    "title": "The Best Easy One Pot Chicken and Rice",
+    "image": "/assessts/White people chicken.png",
+    "time": "30 Minutes",
+    "type": "Meat"
+  },
+  {
+    "title": "The Creamiest Creamy Chicken and Bacon Pasta",
+    "image": "/assessts/Pasta.png",
+    "time": "30 Minutes",
+    "type": "Lunch"
+  }
+]

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PlateUp</title>
+    
+    <!-- Link to the new CSS file -->
+    <link rel="stylesheet" href="contact.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+     <header>
+        <div class="logo">
+            <!-- I've used your new image path -->
+            <img src="assessts/Main logo website.png" alt="PlateUp Logo"> 
+        </div>
+        <nav>
+            <!-- Restored the ul/li structure that the CSS expects -->
+            <ul>
+                <li><a href="/Home.html">Home</a></li>
+                <li><a href="/recipe.html">Recipes</a></li>
+                <li><a href="/Blog.html">Blog</a></li>
+                <li><a href="/contacts.html" class="active">Contact</a></li>
+                <li><a href="/Login.html">Login</a></li>
+            </ul>
+        </nav>
+        <!-- Changed class back to "socials" and used img tags -->
+        <div class="socials">
+            <a href="#"><img src="assessts/X (yeah just x).png" alt="X"></a>
+            <a href="#"><img src="assessts/Instagram .png" alt="Instagram"></a>
+            <a href="#"><img src="assessts/Facebook.png" alt="Facebook"></a>
+        </div>
+    </header>
+
+    <main class="contact-container">
+        <div class="title-header">
+            <h1>Contact us</h1>
+            <img src="assessts\3 peo 3.png" alt="Farmer emoji" class="title-emoji">
+        </div>
+
+        <div class="content-wrapper">
+            <div class="image-section">
+                <!-- Placeholder for the pixel art owl -->
+                <img src="assessts\owl 1.png" alt="Pixel art of an owl">
+            </div>
+            <div class="form-section">
+                <form action="#">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">NAME</label>
+                            <input type="text" id="name" placeholder="Enter your name...">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">EMAIL ADDRESS</label>
+                            <input type="email" id="email" placeholder="Your email address...">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="subject">SUBJECT</label>
+                            <input type="text" id="subject" placeholder="Enter subject...">
+                        </div>
+                        <div class="form-group">
+                            <label for="enquiry-type">ENQUIRY TYPE</label>
+                            <select id="enquiry-type">
+                                <option>Advertising</option>
+                                <option>General Question</option>
+                                <option>Feedback</option>
+                                <option>Collaboration</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="messages">MESSAGES</label>
+                        <textarea id="messages" placeholder="Enter your messages..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- NEW SECTIONS ADDED BELOW -->
+
+    <section class="showcase-banner-container">
+        <div class="showcase-banner">
+            <img src="assessts/kisspng-salad-salad-fresh-food-healthylife-vegetables-vegetarian-5d42e3a7cb8543 1.png" alt="Salad decoration" class="deco-left">
+            <h2>Showcase your culinary creations with us.</h2>
+            <p>Share your favorite recipes and inspire food lovers everywhere. Join our community and let your dishes take the spotlight.</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Your email address...">
+                <button type="submit">Serve</button>
+            </form>
+            <img src="assessts/Photo-plate.png" alt="Salad bowl decoration" class="deco-right">
+        </div>
+    </section>
+
+    <section class="delicious-recipes">
+        <h2>Check out the delicious recipe</h2>
+        <div class="recipe-grid">
+            <!-- Recipe Card 1 -->
+            <div class="recipe-card-v2">
+                <div class="card-image">
+                    <img src="assessts/image 26 (3).png" alt="Mixed Tropical Fruit Salad">
+                    <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="card-content">
+                    <h3>Mixed Tropical Fruit Salad with Superfood Boosts</h3>
+                    <div class="card-meta">
+                        <span><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+                        <span><i class="fa-solid fa-utensils"></i> Healthy</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Recipe Card 2 -->
+            <div class="recipe-card-v2">
+                <div class="card-image">
+                    <img src="assessts/image 26 (4).png" alt="Wagyu Beef Cheeseburger">
+                    <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="card-content">
+                    <h3>Big and Juicy Wagyu Beef Cheeseburger</h3>
+                    <div class="card-meta">
+                        <span><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+                        <span><i class="fa-solid fa-utensils"></i> Western</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Recipe Card 3 -->
+            <div class="recipe-card-v2">
+                <div class="card-image">
+                    <img src="assessts/image 26 (5).png" alt="Japanese Fried Rice">
+                    <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="card-content">
+                    <h3>Healthy Japanese Fried Rice with Asparagus</h3>
+                    <div class="card-meta">
+                        <span><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+                        <span><i class="fa-solid fa-utensils"></i> Healthy</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Recipe Card 4 -->
+            <div class="recipe-card-v2">
+                <div class="card-image">
+                    <img src="assessts/image 26 (6).png" alt="Vegetarian Taco">
+                    <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="card-content">
+                    <h3>Cauliflower Walnut Vegetarian Taco Meat</h3>
+                    <div class="card-meta">
+                        <span><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+                        <span><i class="fa-solid fa-utensils"></i> Eastern</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>PlateUp</h3>
+                <p>share your flavors, savor the community.</p>
+            </div>
+            <nav class="footer-nav">
+                <a href="/Home.html" class="footer-nav-items">Home</a>
+                <a href="/Recipes.html" class="footer-nav-items">Recipes</a>
+                <a href="/Blog.html" class="footer-nav-items">Blog</a>
+                <a href="/contacts.html" class="footer-nav-items">Contact</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2025 A&Bs. Powered by Tenacity</p>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+

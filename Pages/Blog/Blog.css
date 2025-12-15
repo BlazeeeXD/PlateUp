@@ -1,0 +1,453 @@
+/* 1. Global Styles & Variables */
+:root {
+    --color-primary-orange: #F97316;
+    --color-text-dark: #1F2937;
+    --color-text-medium: #374151;
+    --color-text-light: #6B7280;
+    --color-background: #F9FAFB;
+    --font-primary: 'Nunito', sans-serif;
+    --font-pixel: 'Press Start 2P', cursive;
+}
+
+body {
+    font-family: 'Pixelify Sans', sans-serif;
+    background-color: var(--color-background-main);
+    color: var(--color-medium-text);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.site-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* 2. Header & Navigation */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.logo img {
+    font-weight: 800; 
+    font-size: 1.5rem; 
+    color: var(--color-primary-orange);
+}
+
+.main-navigation {
+    display: none; 
+    gap: 2rem; 
+    font-weight: 700; 
+    background-color: #F6E9CA;
+    padding-right: 67px;
+    padding-left: 67px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 2.5rem;
+}
+
+
+.nav-link:hover {
+    color: var(--color-primary-orange);
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 1rem; 
+}
+
+.header-social-icons .social-link:hover { color: #000; }
+
+
+/* 3. Page Intro & Search Bar */
+.page-intro {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-dark-text);
+}
+
+.page-subtitle {
+    color: var(--color-light-text);
+    margin-top: 1rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-bar {
+    display: inline-flex;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.search-input {
+    border: none;
+    background: none;
+    padding: 0 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    width: 250px;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: var(--color-primary-orange);
+}
+
+.search-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #374151;
+}
+
+/*  4. Main Content Layout */
+.main-content-layout {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+/* 5. Blog List */
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.blog-post {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-image-container {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.post-image {
+    width: 100%;
+    height: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+}
+
+.post-content {
+    margin-top: 1rem;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-dark-text);
+}
+
+.post-title a:hover {
+    color: var(--color-primary-orange);
+}
+
+.post-excerpt {
+    color: var(--color-light-text);
+    margin-top: 0.5rem;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #4B5563;
+}
+
+.author-avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+}
+
+.meta-separator {
+    margin: 0 0.75rem;
+}
+
+/* 6. Pagination */
+.pagination {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.pagination-list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination-link, .pagination-ellipsis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #4B5563;
+    transition: all 0.3s ease;
+}
+
+.pagination-link:hover {
+    background-color: var(--color-background-accent);
+    color: var(--color-dark-text);
+}
+
+.pagination-link.active {
+    background-color: var(--color-dark-text);
+    color: white;
+}
+
+
+/* 7. Sidebar */
+.sidebar-widget {
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.widget-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.widget-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tasty-recipe {
+    display: flex;
+    align-items: center;
+}
+
+.tasty-recipe-image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.tasty-recipe-title {
+    font-weight: 700;
+    line-height: 1.2;
+}
+.tasty-recipe-title a:hover {
+    color: var(--color-primary-orange);
+}
+
+.tasty-recipe-author {
+    font-size: 0.875rem;
+    color: var(--color-light-text);
+    margin-top: 0.25rem;
+}
+
+/* 8. Newsletter & Footer */
+.newsletter-section {
+    height: 400px;
+    margin-top: 5rem; 
+    padding: 2rem;
+    background-image: url(/assessts/Footer\ Image.png);
+    background-size:cover ;
+    background-position: center center;
+    position: relative;
+    border-radius: 3.75rem;
+}
+
+.newsletter-content {
+    padding-top: 3%;
+    text-align: center;
+    max-width: 42rem; 
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.newsletter-title {
+    font-size: 2.84rem; 
+    font-weight: 800; 
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+}
+
+.below-newsletter-title {
+   margin-top: 10px !important;
+   color: #606060;
+}
+
+.newsletter-form {
+    display: inline-flex;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.newsletter-input {
+    border: none;
+    background: none;
+    padding: 0 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    width: 250px;
+    outline: none;
+}
+
+.newsletter-input:focus {
+    border-color: var(--color-primary-orange);
+}
+
+.newsletter-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.newsletter-button:hover {
+    background-color: var(--color-text-medium);
+}
+
+
+.main-footer {
+    font-family: sans-serif;
+    max-width: 1200px;
+    margin: 4rem auto 2rem auto;
+    padding: 2rem 2rem 0 2rem;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.footer-brand p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 2rem;
+}
+.footer-nav a {
+    font-weight: 500;
+}
+
+.footer-bottom {
+    margin-left: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-nav-items:hover{
+    color: var(--color-primary-orange);
+}
+
+
+/* 9. Responsive Media Queries */
+@media (min-width: 768px) { 
+    .main-navigation, .header-social-icons {
+        display: flex;
+    }
+    
+    .blog-post {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .post-image-container {
+        width: 33.33%;
+    }
+
+    .post-content {
+        width: 66.66%;
+        margin-top: 0;
+        padding-left: 2rem;
+    }
+
+    .newsletter-form {
+        flex-direction: row;
+    }
+
+    .newsletter-button {
+        width: auto;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1024px) { 
+    .main-content-layout {
+        grid-template-columns: 2fr 1fr; 
+    }
+}
+

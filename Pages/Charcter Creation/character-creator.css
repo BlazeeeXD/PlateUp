@@ -1,0 +1,246 @@
+/* --- Import Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+/* --- General Styles & Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    /* Updated Background */
+    background: url('/assessts/assessts/choppingboard1.jpg') no-repeat center top; /* Aligned to the top */
+    background-size: cover; /* Spans the entire page */
+    
+    color: #4C4A48; /* Dark brown text color */
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Header Styles (Matching your site's main header) --- */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%; 
+    background-color: transparent; /* Made header background transparent */
+    color: #4C4A48; /* Adjust text color for light background */
+}
+
+.header-container .logo img {
+    height: 60px;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    background-color: #F3E9D2; /* Match your site's nav bar color */
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    gap: 2rem; 
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #4A4A4A;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #000;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-icons img {
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* --- Main Content Area --- */
+.creator-container {
+    flex-grow: 1; /* Allows it to take up available space */
+    max-width: 1200px; /* Slightly wider to accommodate cards */
+    margin: 3rem auto;
+    padding: 0 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5rem;
+    color: #4C4A48; /* Dark brown title */
+    text-shadow: 2px 2px 0 #F3E9D2; /* Light tan shadow */
+    margin-bottom: 3rem;
+    line-height: 1.2;
+}
+
+/* --- Character Grid --- */
+.character-select-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align cards to the top */
+    flex-wrap: wrap; 
+    gap: 2rem; /* More space between cards */
+    position: relative;
+}
+
+/* --- Character Card Base --- */
+.character-card {
+    width: 280px; /* Fixed width for consistent look */
+    height: 380px; /* Fixed height */
+    background-color: #ffffff; /* Clean white background */
+    border: 4px solid #4C4A48; /* Dark brown border */
+    box-shadow: 8px 8px 0px #C1A98B; /* Softer, tan shadow */
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 1; /* Default z-index */
+}
+
+.character-card:hover {
+    transform: translateY(-10px) scale(1.03); /* Lift and grow slightly on hover */
+    box-shadow: 12px 12px 0px #C1A98B;
+    z-index: 10; /* Bring hovered card to front */
+}
+
+/* Selected Card State */
+.character-card.selected {
+    border-color: #e65100; /* Warm orange border for selected */
+    box-shadow: 0 0 20px #e65100, 0 0 10px #e65100, 8px 8px 0px #C1A98B; /* Orange glow */
+    transform: translateY(-15px) scale(1.05); /* More prominent lift */
+    z-index: 20; /* Ensure selected is always on top */
+}
+
+/* --- Card Header --- */
+.card-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F3E9D2; /* Light tan from nav bar */
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #C1A98B; /* Tan border */
+}
+
+.player-name {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: #4C4A48; /* Dark brown text */
+    text-shadow: none;
+}
+
+.player-number {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    background-color: #e65100; /* Warm orange */
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border: 2px solid #4C4A48;
+    box-shadow: 2px 2px 0 #4C4A48;
+}
+
+/* --- Character Visual Placeholder --- */
+.character-visual-placeholder {
+    width: 100%;
+    height: 150px; /* Space for character image */
+    background-color: transparent; /* Made background transparent */
+    margin-bottom: 0.5rem;
+    overflow: hidden; /* Crucial for cropping the enlarged image */
+    display: flex; /* Use flexbox to help center/position the image */
+    justify-content: center;
+    align-items: flex-start; /* Align image to the top of the placeholder */
+}
+
+.character-visual-placeholder img {
+    width: 100%;
+    height: auto; /* Allow height to adjust naturally with width */
+    object-fit: cover; /* This makes the image cover the area, might still crop */
+    transform: scale(1.5) translateY(-20%); /* Enlarge and move up to show top half */
+    transform-origin: center top; /* Ensure scaling/moving is from the top center */
+    /* Add a slight negative margin-top if needed to pull it up further */
+    /* margin-top: -XXpx; */ 
+}
+
+
+/* --- Character Stats (now Description) --- */
+.character-stats {
+    width: 100%;
+    background-color: #F3E9D2; /* Light tan */
+    padding: 1rem; /* A bit more padding for text */
+    margin-bottom: 0.5rem;
+    border-top: 2px solid #C1A98B;
+    border-bottom: 2px solid #C1A98B;
+    /* Set a min-height to ensure a consistent size */
+    min-height: 100px; 
+    display: flex;
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center */
+}
+
+.character-description {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    color: #6d4c41; /* Darker brown */
+    line-height: 1.5;
+    text-align: left; /* Keep text left-aligned */
+}
+
+
+/* --- Card Footer / Select Button --- */
+.card-footer {
+    width: 100%;
+}
+
+.select-btn {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    background: linear-gradient(180deg, #8bc34a 0%, #4caf50 100%); /* Green gradient */
+    color: #ffffff;
+    border: 3px solid #4C4A48; /* Dark brown border */
+    padding: 0.75rem 1rem;
+    box-shadow: 4px 4px 0 #4C4A48; /* Dark brown shadow */
+    cursor: pointer;
+    transition: all 0.1s ease;
+    text-shadow: 1px 1px 0 #4C4A48;
+    width: 100%;
+}
+
+.select-btn:hover {
+    background: linear-gradient(180deg, #9ccc65 0%, #5cb85c 100%);
+}
+
+.select-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #4C4A48;
+}
+

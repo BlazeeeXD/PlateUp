@@ -1,0 +1,32 @@
+[
+  {
+    "name": "BreakFast",
+    "image": "/assessts/Pancakes.png",
+    "gradientClass": "gradient-BreakFast"
+  },
+  {
+    "name": "Vegan",
+    "image": "/assessts/Sandwich.png",
+    "gradientClass": "gradient-Vegan"
+  },
+  {
+    "name": "Meat",
+    "image": "/assessts/Roastedchicken.png",
+    "gradientClass": "gradient-Meat"
+  },
+  {
+    "name": "Dessert",
+    "image": "/assessts/Fruitcake.png",
+    "gradientClass": "gradient-Dessert"
+  },
+  {
+    "name": "Lunch",
+    "image": "/assessts/Taco.png",
+    "gradientClass": "gradient-Lunch"
+  },
+  {
+    "name": "Chocolate",
+    "image": "/assessts/Chocolatecake.png",
+    "gradientClass": "gradient-Chocolate"
+  }
+]

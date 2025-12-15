@@ -1,0 +1,477 @@
+/* Google Font Import for a similar look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* --- General Styles & Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfaf3; /* Light cream background from image */
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- UPDATED HEADER STYLES --- */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%; 
+}
+
+.header-container .logo img {
+    height: 60px;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    background-color: #F3E9D2;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    gap: 2rem; 
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #4A4A4A;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #000;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-icons img {
+    height: 30px;
+    transition: opacity 0.3s ease;
+}
+.social-icons img:hover {
+    opacity: 0.75;
+}
+/* --- END OF HEADER UPDATES --- */
+
+
+/* --- Main Recipe Container --- */
+.recipe-container {
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    padding: 0 2rem;
+}
+
+/* --- Recipe Header Section --- */
+.recipe-title-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.meta-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2rem;
+}
+
+.meta-info .author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.3;
+}
+
+.meta-info .author img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.meta-info .details {
+    display: flex;
+    gap: 2rem;
+    color: #555;
+    font-size: 0.8rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.detail-item i {
+    font-size: 1.5rem;
+    color: #888;
+}
+
+.detail-item p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* --- Main Content Layout --- */
+.content-wrapper {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.main-content {
+    flex: 2; /* Takes up 2/3 of the space */
+}
+
+.sidebar {
+    flex: 1; /* Takes up 1/3 of the space */
+}
+
+/* --- Video/Image container --- */
+.video-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-container img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.video-container:hover .play-button {
+    background-color: white;
+}
+
+/* --- Sidebar --- */
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.action-buttons button {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    padding: 0.75rem 0;
+    width: 110px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background-color: #e7e7e7;
+}
+
+.nutrition-card {
+    background-color: #fff8eb;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.nutrition-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.nutrition-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0e6d2;
+}
+
+.nutrition-item:last-of-type {
+    border-bottom: none;
+}
+
+.nutrition-item span:first-child {
+    font-weight: 500;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 1.5rem;
+    line-height: 1.5;
+}
+
+
+/* --- Content Sections --- */
+.recipe-description {
+    margin-top: 2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.ingredients-section,
+.directions-section {
+    margin-top: 3rem;
+}
+
+.ingredients-section h2,
+.directions-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ingredients-section h2 img,
+.directions-section h2 img {
+    height: 40px;
+}
+
+.ingredients-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.ingredients-list {
+    list-style: none;
+}
+
+.ingredients-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+    color: #333;
+}
+
+.custom-checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; 
+    cursor: pointer; 
+}
+
+.custom-checkbox.checked {
+    background-color: #333;
+    border-color: #333;
+    color: white;
+}
+
+.custom-checkbox .fa-check {
+    font-size: 0.8rem;
+    visibility: hidden; 
+}
+
+.custom-checkbox.checked .fa-check {
+    visibility: visible; 
+}
+
+
+/* Other Recipes Section */
+.other-recipes {
+    margin-top: 2rem;
+}
+
+.other-recipes h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.recipe-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.recipe-card:hover {
+    opacity: 0.8;
+}
+
+.recipe-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.recipe-card-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+.recipe-card-info p {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+
+/* --- Directions Section --- */
+.direction-steps {
+    list-style: none;
+    counter-reset: step-counter;
+}
+
+.direction-steps > li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.direction-steps > li::before {
+    counter-increment: step-counter;
+    content: counter(step-counter) ".";
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    padding-top: 0.25rem; /* Align number with the heading */
+}
+
+.direction-steps > li .custom-checkbox {
+    margin-top: 0.5rem;
+}
+
+.direction-steps > li > div {
+    flex-grow: 1;
+}
+
+.direction-steps > li h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.direction-steps .sub-steps {
+    list-style: decimal;
+    padding-left: 1.25rem; /* Indent sub-steps */
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.direction-steps .sub-steps li {
+    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.directions-image-container {
+    margin-top: 2rem;
+    margin-bottom: 1rem; /* Adjusted margin for better flow */
+}
+
+.directions-image-container img {
+    max-width: 100%;
+    border-radius: 15px;
+    height: auto;
+    display: block; 
+}
+
+.main-footer {
+    max-width: 1200px;
+    margin: 4rem auto 2rem auto;
+    padding: 2rem 2rem 0 2rem;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.footer-brand p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 2rem;
+}
+.footer-nav a {
+    font-weight: 500;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+}

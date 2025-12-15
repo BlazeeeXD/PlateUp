@@ -1,0 +1,440 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* --- General Styles & Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7F8FC; /* Light blue-gray background from image */
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- UPDATED HEADER STYLES --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%; /* Increased padding slightly for more space */
+    /* background-color and border-bottom removed to match new design */
+}
+
+header .logo img {
+    height: 60px; /* Increased logo size slightly */
+}
+
+/* Navigation container styles to match new design */
+header nav ul {
+    display: flex;
+    align-items: center;
+    background-color: #F3E9D2; /* New lighter beige background color */
+    border-radius: 50px; /* Fully rounded corners */
+    padding: 1rem 2rem;
+    gap: 2rem; 
+}
+
+/* Navigation link styles to match new design */
+header nav a {
+    font-weight: 600; /* Slightly adjusted font weight */
+    font-size: 0.9rem;
+    color: #4A4A4A; /* Darker text color */
+    transition: color 0.3s ease;
+}
+
+/* Hover and active effect for new design */
+header nav a:hover,
+header nav a.active {
+    color: #000;
+}
+
+/* Social icons styles for new design */
+.socials {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Sizing for your social media images */
+.socials img {
+    height: 30px; /* Increased icon size slightly */
+    transition: opacity 0.3s ease;
+}
+.socials img:hover {
+    opacity: 0.75;
+}
+/* --- END OF UPDATES --- */
+
+
+/* --- Main Contact Container --- */
+.contact-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.title-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title-header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.title-header .title-emoji {
+    height: 45px;
+    vertical-align: middle;
+}
+
+/* --- Content Layout --- */
+.content-wrapper {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.image-section {
+    flex: 1;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-section {
+    flex: 1.5; /* Make the form section wider */
+}
+
+/* --- Form Styles --- */
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Custom dropdown arrow */
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23888' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+
+.submit-btn {
+    margin-top: 4%;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.submit-btn:hover {
+    opacity: 0.85;
+}
+
+
+/* --- Showcase Banner --- */
+.showcase-banner-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.showcase-banner {
+    background-color: #E8C48E;
+    border-radius: 30px;
+    padding: 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.showcase-banner h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.showcase-banner p {
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
+    color: #333;
+}
+
+.subscribe-form {
+    display: inline-flex;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.subscribe-form input {
+    border: none;
+    background: none;
+    padding: 0 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    width: 250px;
+    outline: none;
+}
+
+.subscribe-form button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.subscribe-form button:hover {
+    opacity: 0.8;
+}
+
+.showcase-banner .deco-left,
+.showcase-banner .deco-right {
+    position: absolute;
+    bottom: -20px;
+    max-height: 150px;
+}
+.showcase-banner .deco-left {
+    left: 20px;
+}
+.showcase-banner .deco-right {
+    right: 20px;
+}
+
+/* --- Delicious Recipes Section --- */
+.delicious-recipes {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.delicious-recipes h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.recipe-card-v2 {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+.recipe-card-v2:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card-v2 .card-image {
+    position: relative;
+}
+
+.recipe-card-v2 .card-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.recipe-card-v2 .like-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recipe-card-v2 .like-btn i {
+    color: #333;
+}
+
+.recipe-card-v2 .card-content {
+    padding: 1rem;
+}
+
+.recipe-card-v2 h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.recipe-card-v2 .card-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #777;
+}
+.recipe-card-v2 .card-meta i {
+    margin-right: 0.25rem;
+}
+
+/* --- Footer --- */
+.main-footer {
+    max-width: 1200px;
+    margin: 4rem auto 2rem auto;
+    padding: 2rem 2rem 0 2rem;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.footer-brand p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 2rem;
+}
+.footer-nav a {
+    font-weight: 500;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    .image-section {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 2rem auto;
+    }
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        display: none; /* Simple hiding for mobile, can be replaced with hamburger menu */
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .title-header h1 {
+        font-size: 2.5rem;
+    }
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-content, .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}
+
